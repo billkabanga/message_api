@@ -8,9 +8,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const port = process.env.PORT || 8000;
 
-app.get('*', (req, res) => res.status(200).send({
-  message: 'Welcome to the message API'
-}));
+app.get('*', (req, res) => res.status(200).send({ message: 'Welcome to the message API' }));
 
 app.listen(port, () => {
   console.log(`Server running on PORT ${port}`);
