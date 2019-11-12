@@ -5,7 +5,7 @@ const user = (sequelize, DataTypes) => {
   User.associate = (models) => {
     User.hasMany(models.Message, { onDelete: 'CASCADE' });
   };
-  return user;
+  return User;
 };
 
 export default user;

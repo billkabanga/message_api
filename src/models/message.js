@@ -3,7 +3,7 @@ const message = (sequelize, DataTypes) => {
   Message.associate = (models) => {
     Message.belongsTo(models.User, { as: 'author', foreignKey: 'authId', targetKey: 'id', onUpdate: 'CASCADE', onDelete: 'CASCADE' });
   };
-  return message;
+  return Message;
 };
 
 export default message;

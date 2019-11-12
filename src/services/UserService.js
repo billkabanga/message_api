@@ -2,10 +2,10 @@
 /* eslint-disable require-jsdoc */
 import db from '../models';
 
-class UserService {
+export default class UserService {
   static async getAllUsers() {
     try {
-      return await db.User.findAll();
+      return await db.user.findAll();
     } catch (error) {
       throw error;
     }
@@ -13,7 +13,7 @@ class UserService {
 
   static async createUser(newUser) {
     try {
-      return await db.User.create(newUser);
+      return await db.user.create(newUser);
     } catch (error) {
       throw error;
     }
@@ -21,11 +21,9 @@ class UserService {
 
   static async getSingleUser(email) {
     try {
-      return await db.User.findOne({ where: { email: String(email) } });
+      return await db.user.findOne({ where: { email: String(email) } });
     } catch (error) {
       throw error;
     }
   }
 }
-
-export default UserService;
