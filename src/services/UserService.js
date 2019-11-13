@@ -5,7 +5,7 @@ import db from '../models';
 export default class UserService {
   static async getAllUsers() {
     try {
-      return await db.user.findAll();
+      return await db.User.findAll();
     } catch (error) {
       throw error;
     }
@@ -13,7 +13,7 @@ export default class UserService {
 
   static async createUser(newUser) {
     try {
-      return await db.user.create(newUser);
+      return await db.User.create(newUser);
     } catch (error) {
       throw error;
     }
@@ -21,7 +21,7 @@ export default class UserService {
 
   static async getSingleUser(email) {
     try {
-      return await db.user.findOne({ where: { email: String(email) } });
+      return await db.User.findOne({ where: { email: String(email) } });
     } catch (error) {
       throw error;
     }

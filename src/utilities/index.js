@@ -24,11 +24,6 @@ export default class Utils {
     const result = { status: this.type,
       message: this.message,
       data: this.data, };
-    console.log('usr', result);
-    if (this.type === 'success') {
-      return res.status(this.statusCode).json(result);
-    }
-    return res.status(this.statusCode).json({ status: this.type,
-      message: this.messsage });
+    return res.status(this.statusCode).json(result);
   }
 }

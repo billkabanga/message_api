@@ -9,3 +9,7 @@ node_modules
 
 # .env to ignore
 .env
+
+# coverage files
+coverage
+.nyc_output
